@@ -133,20 +133,18 @@ html {
   color: #fff;
   font-size: 2.5rem;
   position: relative; }
-
-.header-top-menu__link:before {
-  content: "";
-  display: block;
-  width: 0%;
-  height: 2px;
-  background-color: white;
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  transition: all 0.3s; }
-
-.header-top-menu__link:hover:before {
-  width: 100%; }
+  .header-top-menu__link:before {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    transition: all 0.3s; }
+  .header-top-menu__link:hover:before {
+    width: 100%; }
 
 .header-logo {
   display: inline-block;
@@ -253,16 +251,15 @@ html {
 .exclusive-menu-book__table-now {
   position: relative;
   z-index: 10; }
-
-.exclusive-menu-book__table-now:before {
-  content: "";
-  position: absolute;
-  top: -40px;
-  bottom: -40px;
-  right: -145px;
-  left: -300px;
-  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.03) 10%, rgba(255, 255, 255, 0.4) 100%);
-  z-index: -1; }
+  .exclusive-menu-book__table-now:before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    bottom: -40px;
+    right: -145px;
+    left: -300px;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.03) 10%, rgba(255, 255, 255, 0.4) 100%);
+    z-index: -1; }
 
 .exclusive-menu-book__link {
   color: #ffc901; }
@@ -288,30 +285,28 @@ html {
   color: #fff;
   display: inline-block;
   position: relative; }
-
-.about-screen-header__elem:before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: -120px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  display: block;
-  width: 63px;
-  height: 19px;
-  background: url(../image/png/qotes-yellow.png) no-repeat center center; }
-
-.about-screen-header__elem:after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: -116px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  display: block;
-  width: 63px;
-  height: 19px;
-  background: url(../image/png/qotes-yellow.png) no-repeat center center; }
+  .about-screen-header__elem:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -120px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    display: block;
+    width: 63px;
+    height: 19px;
+    background: url(../image/png/qotes-yellow.png) no-repeat center center; }
+  .about-screen-header__elem:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -116px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    display: block;
+    width: 63px;
+    height: 19px;
+    background: url(../image/png/qotes-yellow.png) no-repeat center center; }
 
 .about-screen-header__span {
   font-family: Atma, sans-serif;
@@ -364,28 +359,26 @@ html {
   display: inline-block;
   color: #fff;
   margin: 10rem 0; }
-
-.food-quality-screen-content__header:before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: -96px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  width: 63px;
-  height: 19px;
-  background: url(../image/png/quotes-white.png) no-repeat center center; }
-
-.food-quality-screen-content__header:after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: -110px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  width: 63px;
-  height: 19px;
-  background: url(../image/png/quotes-white.png) no-repeat center center; }
+  .food-quality-screen-content__header:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -96px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    width: 63px;
+    height: 19px;
+    background: url(../image/png/quotes-white.png) no-repeat center center; }
+  .food-quality-screen-content__header:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -110px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    width: 63px;
+    height: 19px;
+    background: url(../image/png/quotes-white.png) no-repeat center center; }
 
 .food-quality-screen-content__paragraph {
   color: #fff;
@@ -403,12 +396,11 @@ html {
   text-transform: uppercase;
   word-spacing: 0.1rem;
   letter-spacing: 2px; }
-
-.food-quality-screen-content-discount h3 span {
-  font-size: 5.5rem;
-  text-transform: uppercase;
-  word-spacing: 1rem;
-  letter-spacing: 1px; }
+  .food-quality-screen-content-discount h3 span {
+    font-size: 5.5rem;
+    text-transform: uppercase;
+    word-spacing: 1rem;
+    letter-spacing: 1px; }
 
 .food-quality-screen-content-discount > span {
   display: block;
@@ -440,30 +432,28 @@ html {
   font-size: 5.5rem;
   text-transform: uppercase;
   color: #fff; }
-
-.gallery-screen-head-header:before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: -136px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  display: block;
-  width: 63px;
-  height: 19px;
-  background: url(../image/png/qotes-yellow.png) no-repeat center center; }
-
-.gallery-screen-head-header:after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: -136px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  display: block;
-  width: 63px;
-  height: 19px;
-  background: url(../image/png/qotes-yellow.png) no-repeat center center; }
+  .gallery-screen-head-header:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -136px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    display: block;
+    width: 63px;
+    height: 19px;
+    background: url(../image/png/qotes-yellow.png) no-repeat center center; }
+  .gallery-screen-head-header:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -136px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    display: block;
+    width: 63px;
+    height: 19px;
+    background: url(../image/png/qotes-yellow.png) no-repeat center center; }
 
 .gallery-screen-image-wrap {
   display: -ms-flexbox;
@@ -479,20 +469,17 @@ html {
   -ms-flex-pack: justify;
       justify-content: space-between;
   padding: 10px; }
-
-.gallery-screen-image-wrap-item:first-child {
-  padding-left: 0; }
-
-.gallery-screen-image-wrap-item:last-child {
-  padding-right: 0; }
+  .gallery-screen-image-wrap-item:first-child {
+    padding-left: 0; }
+  .gallery-screen-image-wrap-item:last-child {
+    padding-right: 0; }
 
 .image-wrap__item {
   padding: 7px 0 7px 0; }
-
-.image-wrap__item img {
-  display: block;
-  margin: 0;
-  width: 100%; }
+  .image-wrap__item img {
+    display: block;
+    margin: 0;
+    width: 100%; }
 
 .screen-bookNow {
   width: 100%;
@@ -511,30 +498,28 @@ html {
   padding: 7.3rem 0 7.8rem 0;
   text-transform: uppercase;
   position: relative; }
-
-.bookNow-header:before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: -12rem;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  display: block;
-  width: 63px;
-  height: 19px;
-  background: url(../image/png/qotes-yellow.png) no-repeat center center; }
-
-.bookNow-header:after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: -11.8rem;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  display: block;
-  width: 63px;
-  height: 19px;
-  background: url(../image/png/qotes-yellow.png) no-repeat center center; }
+  .bookNow-header:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -12rem;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    display: block;
+    width: 63px;
+    height: 19px;
+    background: url(../image/png/qotes-yellow.png) no-repeat center center; }
+  .bookNow-header:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -11.8rem;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    display: block;
+    width: 63px;
+    height: 19px;
+    background: url(../image/png/qotes-yellow.png) no-repeat center center; }
 
 .bookNow-text {
   font-family: Overpass;
@@ -552,10 +537,9 @@ html {
 
 .form-book-now__item-form {
   margin-bottom: 72px; }
-
-.form-book-now__item-form:last-child {
-  margin-top: 92px;
-  margin-bottom: 0; }
+  .form-book-now__item-form:last-child {
+    margin-top: 92px;
+    margin-bottom: 0; }
 
 .form-book-now input {
   width: 413px;
@@ -585,6 +569,59 @@ html {
   font-size: 3.8rem;
   color: #000;
   text-transform: uppercase; }
+
+.screen-bg {
+  width: 100%;
+  background-color: #141414; }
+
+.screen-bg__img {
+  width: 100%;
+  height: 1000px;
+  max-height: 1000px;
+  background: url(../image/jpeg/beforeLinda-bg.jpg) no-repeat center center;
+  background-size: cover; }
+
+.Linda-Steward {
+  text-align: center;
+  overflow: hidden;
+  position: relative; }
+  .Linda-Steward:before {
+    content: "";
+    display: inline-block;
+    width: 431px;
+    height: 1181px;
+    background: url(../image/png/circle-yellow.png) no-repeat;
+    position: absolute;
+    right: 0;
+    bottom: 0; }
+
+.Linda-Steward__quotes {
+  margin-top: 37px; }
+  .Linda-Steward__quotes span {
+    font-size: 12.2rem;
+    font-family: "Chivo";
+    color: #ffc901;
+    font-weight: bold; }
+
+.Linda-Steward__text {
+  max-width: 1049px;
+  margin: 0 auto; }
+  .Linda-Steward__text p {
+    margin-top: -37px;
+    font-size: 2.8rem;
+    font-family: "Overpass";
+    color: white;
+    line-height: 1.778;
+    font-weight: 200; }
+
+.Linda-Steward__header {
+  margin-top: 38px;
+  padding-bottom: 80px; }
+  .Linda-Steward__header span {
+    font-size: 3.4rem;
+    font-family: "Chivo";
+    color: #ffc901;
+    text-transform: uppercase; }
 
 @media (min-width: 1441px) {
   .content-width-hidden {
