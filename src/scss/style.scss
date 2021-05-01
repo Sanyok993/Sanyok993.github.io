@@ -543,6 +543,66 @@ html {
   	color: #000;
   	text-transform: uppercase;
 }
+.screen-bg {
+	width: 100%;
+	background-color: #141414;
+}
+.screen-bg__img {
+	width: 100%;
+	height: 1000px;
+	max-height: 1000px;
+	background: url(../image/jpeg/beforeLinda-bg.jpg) no-repeat center center;
+	background-size: cover;
+}
+.Linda-Steward {
+	text-align: center;
+	overflow: hidden;
+	position: relative;
+	&:before {
+		content: "";
+		display: inline-block;
+		width: 431px;
+		height: 1181px;
+		background: url(../image/png/circle-yellow.png) no-repeat;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+	}
+}
+.Linda-Steward__quotes {
+	margin-top: 37px;
+	span {
+		font-size: 12.2rem;
+		font-family: "Chivo";
+		color: rgb(255, 201, 1);
+		font-weight: bold;
+	}
+}
+.Linda-Steward__text {
+ 	max-width: 1049px;
+ 	margin: 0 auto;
+ 	p {
+ 		margin-top: -37px;
+ 		font-size: 2.8rem;
+ 	 	font-family: "Overpass";
+ 	 	color: rgb(255, 255, 255);
+ 		line-height: 1.778;
+ 		font-weight: 200;
+ 	}
+}
+.Linda-Steward__header {
+	margin-top: 38px;
+	padding-bottom: 80px;
+	span {
+		font-size: 3.4rem;
+  		font-family: "Chivo";
+  		color: rgb(255, 201, 1);
+ 		text-transform: uppercase;
+	}
+}
+
+
+
 
 
 // media
