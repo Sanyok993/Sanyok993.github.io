@@ -5,7 +5,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="libs/air-datepicker/css/datepicker.min.css">
 	<link rel="stylesheet" href="css/style.css">
+
+	<script
+   src="https://code.jquery.com/jquery-3.5.1.min.js"
+   integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+   crossorigin="anonymous"></script>
+   <script src="libs/air-datepicker/js/datepicker.min.js"></script>
 </head>
 <body>
 	<section class="main-screen">
@@ -140,29 +147,31 @@
 					<div class="bookNow-row">
 						<div class="form-book-now__item-form">
 							<label for="userName">Your full name ?</label>
-							<input type="text" name="userName">
+							<input type="text" name="userName" placeholder="Write your name here...">
 						</div>
 						<div class="form-book-now__item-form">
 							<label for="numberPeople">How many people ?</label>
-							<input type="text" name="numberPeople">
+							<input type="text" name="numberPeople" placeholder="2 people">
 						</div>
 						<div class="form-book-now__item-form">
 							<label for="date">What is the date ?</label>
-							<input type="text" name="date">
+							<div class="calendar-wrap">
+								<input type='text' class="datepicker-here" data-position="right top" id="calendar" placeholder="01 / 15 / 2021">
+							</div>
 						</div>
 					</div>
 					<div class="bookNow-row">
 						<div class="form-book-now__item-form">
 							<label for="email">Your email Address ?</label>
-							<input type="text" name="email">
+							<input type="text" name="email" placeholder="Write your email here...">
 						</div>
 						<div class="form-book-now__item-form">
 							<label for="time">What time ?</label>
-							<input type="text" name="time">
+							<input type="text" name="time" placeholder="10:00 am">
 						</div>
 						<div class="form-book-now__item-form">
 							<label for="phoneNumber">Your phone number ?</label>
-							<input type="text" name="phoneNumber">
+							<input type="text" name="phoneNumber" placeholder="Write your number here...">
 						</div>
 					</div>
 				</div>
@@ -185,15 +194,56 @@
 		</div>
 	</section>
 	<section class="best-Meal-contact">
-		
+		<div class="content-max-width content-max-width-best-meal_align">
+			<div class="best-Meal-contact__content">
+				<div class="best-Meal-contact-header">
+					<h3>Enjoy Our Best Meal</h3>
+				</div>
+				<div class="best-Meal-contact-text">
+					<p>Lorem ipsum dolor sit amet, cosectetur adi
+piscing elit, sed do eiusmod tempor incididunt ut labore etdolore magna sed do eiusmod tempor incididunt ut labore etdolore</p>
+				</div>
+				<div class="best-Meal-contact-link">
+					<a href="#">CONTACT US NOW</a>
+				</div>
+			</div>
+			<div class="best-Meal-contact__img">
+				<img src="image/png/best-meal.png" alt="">
+			</div>
+		</div>
 	</section>
 	<section class="screen-footer">
-		<footer></footer>
+		<footer class="footer">
+			<div class="footer__logo">
+				<a href="index.html" class="header-logo">
+					<span class="header-logo__top header-logo__top-footer">L'Gran</span>
+					<span class="header-logo__bottom header-logo__bottom-footer">food of your own choice</span>
+				</a>
+			</div>
+			<div class="footer__menu">
+				<nav class="header-top-menu">
+					<ul class="header-top-menu-list  header-bottom-menu-list_hide-first-padding">
+						<li class="header-top-menu-list__item header-top-menu-list__item_first-hide-padding footer-list-item"><a href="" class="header-top-menu__link footer-menu-link">about us</a></li>
+						<li class="header-top-menu-list__item footer-list-item"><a href="" class="header-top-menu__link footer-menu-link">menu</a></li>
+						<li class="header-top-menu-list__item footer-list-item"><a href="" class="header-top-menu__link footer-menu-link">bookings</a></li>
+					</ul>
+				</nav>
+				<nav class="header-top-menu">
+					<ul class="header-top-menu-list header-bottom-menu-list_hide-last-padding">
+						<li class="header-top-menu-list__item footer-list-item"><a href="" class="header-top-menu__link footer-menu-link">gallery</a></li>
+						<li class="header-top-menu-list__item footer-list-item"><a href="" class="header-top-menu__link footer-menu-link">contact</a></li>
+						<li class="header-top-menu-list__item header-top-menu-list__item_last-hide-padding footer-list-item"><a href="" class="header-top-menu__link footer-menu-link">blog</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="footer__contacts">
+				<a href="#"><img src="image/png/f.png" alt=""></a>
+				<a href="#"><img src="image/png/t.png" alt=""></a>
+				<a href="#"><img src="image/png/i.png" alt=""></a>
+				<a href="#"><img src="image/png/p.png" alt=""></a>
+			</div>
+		</footer>
 	</section>
-	<script
-  src="https://code.jquery.com/jquery-3.5.1.min.js"
-  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-  crossorigin="anonymous"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
