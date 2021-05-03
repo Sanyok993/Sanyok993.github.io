@@ -91,4 +91,10 @@ $(document).ready(function() {
 	}
 
 	adaptive_function();
+
+		// Инициализация
+	$('#calendar').datepicker({
+		dateFormat: 'dd / mm / yyyy'
+	})
+
 };
