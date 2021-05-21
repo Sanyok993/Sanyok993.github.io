@@ -32,6 +32,7 @@ $(document).ready(function() {
 
 	$(".header-top__menu-burger").click(function(event) {
 		$(".header-top__header-burger-menu").toggleClass("show_block");
+		$("body").toggleClass("lock");
 	});
 
 	// $(".block_title").click(function(event) {
@@ -97,4 +98,15 @@ $(document).ready(function() {
 		dateFormat: 'dd / mm / yyyy'
 	})
 
+	$('.datepicker-here').focus(function() {
+		$('.calendar-wrap').children('span').css({
+			'transform' : 'translateY(-50%) rotate(-90deg)'
+		})
+	})
+
+	$('.datepicker-here').blur(function() {
+		$('.calendar-wrap').children('span').css({
+			'transform' : 'translateY(-50%) rotate(0deg)'
+		})
+	})
 };
