@@ -98,15 +98,37 @@ $(document).ready(function() {
 		dateFormat: 'dd / mm / yyyy'
 	})
 
-	$('.datepicker-here').focus(function() {
-		$('.calendar-wrap').children('span').css({
-			'transform' : 'translateY(-50%) rotate(-90deg)'
-		})
-	})
-
-	$('.datepicker-here').blur(function() {
+	$('#calendar').focus(function() {
 		$('.calendar-wrap').children('span').css({
 			'transform' : 'translateY(-50%) rotate(0deg)'
 		})
 	})
+
+	$('#calendar').blur(function() {
+		$('.calendar-wrap').children('span').css({
+			'transform' : 'translateY(-50%) rotate(180deg)'
+		})
+	})
+
+
+	//Плавная прокрутка
+	$(function(){
+	  $('a[href^="#"]').on('click', function(event) {
+	    // отменяем стандартное действие
+	    event.preventDefault();
+	    
+	    var sc = $(this).attr("href"),
+	        dn = $(sc).offset().top;
+	    /*
+	    * sc - в переменную заносим информацию о том, к какому блоку надо перейти
+	    * dn - определяем положение блока на странице
+	    */
+	    
+	    $('html, body').animate({scrollTop: dn}, 1000);
+	    
+	    /*
+	    * 1000 скорость перехода в миллисекундах
+	    */
+	  });
+	});
 };

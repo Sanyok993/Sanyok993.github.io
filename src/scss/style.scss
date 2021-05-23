@@ -521,16 +521,24 @@ body {
 	justify-content: space-between;
 }
 .bookNow-row {
-	width: 100%;
+	// width: 100%;
+	display: flex;
+	flex-direction: column;
 }
 .form-book-now__item-form {
 		margin-bottom: 7.2rem;
 		&:last-child {
 			margin-top: 9.2rem;
 			margin-bottom: 0;
+			margin-top: 2rem;
+		}
+		select {
+			option {
+				background-color: rgba(0, 0, 0, .5);
+			}
 		}
 }
-.form-book-now input {
+.form-book-now input, .form-book-now select {
 	width: 41.3rem;
   	height: 5.5rem;
   	background-color: transparent;
@@ -545,11 +553,6 @@ body {
   		color: #fff;
   	}
 }
-#calendar {
-	&:focus {
-		
-	}
-}
 .calendar-wrap {
 	display: inline-block;
 	position: relative;
@@ -560,7 +563,7 @@ body {
 		background-size: 100%;
 		position: absolute;
 		top: 50%;
-		transform: translateY(-50%) rotate(0deg);
+		transform: translateY(-50%) rotate(180deg);
 		transition: all 0.2s;
 		right: 10px;
 	}
@@ -975,7 +978,7 @@ body {
 	.content-max-width_bookNow-padding {
 		padding: 0 5rem;
 	}
-	.form-book-now input {
+	.form-book-now input, .form-book-now select {
 		width: 35rem;
 	  	height: 5rem;
 	  	border-radius: 6px;
@@ -1092,7 +1095,7 @@ body {
 		background: linear-gradient(45deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)),url(../image/jpeg/bookNow-bg.jpg) no-repeat center center;
 		background-size: cover;
 	}
-	.form-book-now input {
+	.form-book-now input, .form-book-now select {
 		width: 100%;
 		height: 8rem;
 		font-size: 3.5rem;
@@ -1101,6 +1104,7 @@ body {
 		font-size: 5rem;
 	}
 	.bookNow-row {
+		width: 100%;
 		&:last-child {
 			margin-top: 55.2px;
 		}
