@@ -28,9 +28,9 @@
 					<div class="header-top__column header-top__column_move-one">
 						<nav class="header-top-menu">
 							<ul class="header-top-menu-list  header-bottom-menu-list_hide-first-padding">
-								<li class="header-top-menu-list__item header-top-menu-list__item_first-hide-padding"><a href="" class="header-top-menu__link">about us</a></li>
+								<li class="header-top-menu-list__item header-top-menu-list__item_first-hide-padding"><a href="#about-us" class="header-top-menu__link">about us</a></li>
 								<li class="header-top-menu-list__item"><a href="" class="header-top-menu__link">menu</a></li>
-								<li class="header-top-menu-list__item"><a href="" class="header-top-menu__link">gallery</a></li>
+								<li class="header-top-menu-list__item"><a href="#gallery-scroll" class="header-top-menu__link">gallery</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -43,7 +43,7 @@
 					<div class="header-top__column header-top__column_move-two">
 						<nav class="header-top-menu">
 							<ul class="header-top-menu-list header-bottom-menu-list_hide-last-padding">
-								<li class="header-top-menu-list__item"><a href="" class="header-top-menu__link">bookings</a></li>
+								<li class="header-top-menu-list__item"><a href="#bookings-scroll" class="header-top-menu__link">bookings</a></li>
 								<li class="header-top-menu-list__item"><a href="" class="header-top-menu__link">contact</a></li>
 								<li class="header-top-menu-list__item header-top-menu-list__item_last-hide-padding"><a href="" class="header-top-menu__link">blog</a></li>
 							</ul>
@@ -75,7 +75,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="about-screen">
+	<section class="about-screen" id="about-us">
 		<div class="content-max-width">
 			<div class="about-screen-width">
 				<div class="about-screen-header">
@@ -112,7 +112,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="gallery-screen">
+	<section class="gallery-screen" id="gallery-scroll">
 		<div class="content-max-width content-max-width_gallery-padding">
 			<div class="gallery-screen-head">
 				<h3 class="gallery-screen-head-header">gallery</h3>
@@ -136,7 +136,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="screen-bookNow">
+	<section class="screen-bookNow" id="bookings-scroll">
 		<div class="content-max-width content-max-width_bookNow-padding">
 			<div class="screen-bookNow__header">
 				<div class="bookNow-header-wrapper">
@@ -153,12 +153,21 @@
 						</div>
 						<div class="form-book-now__item-form">
 							<label for="numberPeople">How many people ?</label>
-							<input type="text" name="numberPeople" placeholder="2 people">
+							<select>
+							  <option value="1">1 people</option>
+							  <option selected value="2">2 people</option>
+							  <option value="3">3 people</option>
+							  <option value="4">4 people</option>
+							  <option value="5">5 people</option>
+							  <option value="6">6 people</option>
+							  <option value="7">7 people</option>
+							  <option value="8">8 people</option>
+							</select>
 						</div>
 						<div class="form-book-now__item-form">
 							<label for="date">What is the date ?</label>
 							<div class="calendar-wrap">
-								<input type='text' class="datepicker-here" data-position="right top" id="calendar" placeholder="01 / 15 / 2021">
+								<input type='text'  id="calendar" placeholder="01 / 15 / 2021" autocomplete="off">
 								<span></span>
 							</div>
 						</div>
@@ -166,15 +175,15 @@
 					<div class="bookNow-row">
 						<div class="form-book-now__item-form">
 							<label for="email">Your email Address ?</label>
-							<input type="text" name="email" placeholder="Write your email here...">
+							<input type="email" name="email" placeholder="Write your email here...">
 						</div>
 						<div class="form-book-now__item-form">
 							<label for="time">What time ?</label>
-							<input type="text" name="time" placeholder="10:00 am">
+							<input type="time" name="time" placeholder="10:00 am">
 						</div>
 						<div class="form-book-now__item-form">
 							<label for="phoneNumber">Your phone number ?</label>
-							<input type="text" name="phoneNumber" placeholder="Write your number here...">
+							<input type="tel" name="phoneNumber" placeholder="Write your number here...">
 						</div>
 					</div>
 				</div>
