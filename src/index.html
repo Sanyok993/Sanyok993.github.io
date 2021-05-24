@@ -151,18 +151,24 @@
 							<label for="userName">Your full name ?</label>
 							<input type="text" name="userName" placeholder="Write your name here...">
 						</div>
-						<div class="form-book-now__item-form">
+						<div class="form-book-now__item-form form-book__select-form">
 							<label for="numberPeople">How many people ?</label>
-							<select>
-							  <option value="1">1 people</option>
-							  <option selected value="2">2 people</option>
-							  <option value="3">3 people</option>
-							  <option value="4">4 people</option>
-							  <option value="5">5 people</option>
-							  <option value="6">6 people</option>
-							  <option value="7">7 people</option>
-							  <option value="8">8 people</option>
-							</select>
+							<div class="input-select-wrap">
+								<input type="text" placeholder="2" class="form-book__select-input">
+								<span></span>
+							</div>
+							<div class="position-select-form">
+								<ul class="select-form hide-select-form">
+									<li id="select-form-1">1</li>
+									<li id="select-form-2">2</li>
+									<li id="select-form-3">3</li>
+									<li id="select-form-4">4</li>
+									<li id="select-form-5">5</li>
+									<li id="select-form-6">6</li>
+									<li id="select-form-7">7</li>
+									<li id="select-form-8">8</li>
+								</ul>
+							</div>
 						</div>
 						<div class="form-book-now__item-form">
 							<label for="date">What is the date ?</label>
@@ -179,7 +185,7 @@
 						</div>
 						<div class="form-book-now__item-form">
 							<label for="time">What time ?</label>
-							<input type="time" name="time" placeholder="10:00 am">
+							<input type="time" name="time" placeholder="10:00 am" id="select-time">
 						</div>
 						<div class="form-book-now__item-form">
 							<label for="phoneNumber">Your phone number ?</label>
@@ -256,6 +262,7 @@ piscing elit, sed do eiusmod tempor incididunt ut labore etdolore magna sed do e
 			</div>
 		</footer>
 	</section>
-  <script src="js/script.js"></script>
+		<script src="js/time.js"></script>
+		<script src="js/script.js"></script>
 </body>
 </html>

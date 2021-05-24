@@ -1,67 +1,16 @@
 
 window.onload = function() {
 
+	$(document).ready(function() {
 
-// let price = document.getElementsByClassName("price")[0],
-//     burger = document.getElementsByClassName("header_burger")[0],
-//     wrap = document.getElementsByClassName("header_body")[0];
+		$(".header-top__menu-burger").click(function(event) {
+			$(".header-top__menu-burger").toggleClass("active");
+			$(".header-top__header-burger-menu").toggleClass("show_block");
+			$("body").toggleClass("lock");
+		});
 
-
-// window.addEventListener("resize", function() {
-//         console.log(innerWidth);
-//         // console.log(innerHeight);
-// 		if(innerWidth < 768) {
-// 			wrap.insertBefore(price, burger);
-// 		} else {
-// 			wrap.insertBefore(burger, price);
-// }
-//     }, false);
-
-
-$(document).ready(function() {
-	$(".header-top__menu-burger").click(function(event) {
-		$(".header-top__menu-burger").toggleClass("active");
-		// $("body").toggleClass("lock");
-	})
-})
-
-$(document).ready(function() {
-	// $(".block_title").click(function(event) {
-	// 	$(this).toggleClass("displayNone displayBlock").find(".show_menu_body").slideToggle(300);
-	// });
-
-	$(".header-top__menu-burger").click(function(event) {
-		$(".header-top__header-burger-menu").toggleClass("show_block");
-		$("body").toggleClass("lock");
 	});
 
-	// $(".block_title").click(function(event) {
-	// 	$(".show_menu_body").toggleClass("show_block");	
-	// }).children().click(function(event){        // вешаем на потомков
- //        event.stopPropagation();   // предотвращаем всплытие
- //    });;
-	// $(".block_title").click(function(event) {
-	// 	$(".block_title").toggleClass("show_arrow_bottom");
-	// }).children().click(function(event){        // вешаем на потомков
- //        event.stopPropagation();   // предотвращаем всплытие
- //    });;
-});
-
-// $(window).resize(function(event) {
-// 	var w = $(window).outerWidth();
-// 	// var w = $(window).outerHeight();
-// 	if (w < 1300) {
-// 		$(".link_c").css({
-// 			"width": w /8+(30),
-// 			"height": w /8+(30)
-// 		});
-// 	} else {
-// 		$(".link_c").css({
-// 			"width": "200",
-// 			"height": "200"
-// 		});
-// 	}
-// })
 	$(window).resize(function(event) {
 		adaptive_function();
 	});
@@ -93,16 +42,16 @@ $(document).ready(function() {
 
 	adaptive_function();
 
-		// Инициализация
+	// Инициализация
 	$('#calendar').datepicker({
 		dateFormat: 'dd / mm / yyyy'
 	})
 
-	$('#calendar').focus(function() {
-		$('.calendar-wrap').children('span').css({
-			'transform' : 'translateY(-50%) rotate(0deg)'
+		$('#calendar').focus(function() {
+			$('.calendar-wrap').children('span').css({
+				'transform' : 'translateY(-50%) rotate(0deg)'
+			})
 		})
-	})
 
 	$('#calendar').blur(function() {
 		$('.calendar-wrap').children('span').css({
@@ -110,19 +59,50 @@ $(document).ready(function() {
 		})
 	})
 
+	$('.form-book__select-input').on('focus', function() {
+		$('.select-form').removeClass('hide-select-form');
+		$('.input-select-wrap').children('span').css({
+			'transform' : 'translateY(-50%) rotate(0deg)'
+		})
+	})
 
-	//Плавная прокрутка
+	$('.select-form').children('li').on('click', function(event) {
+		// console.log($(this).text());
+
+			$('.form-book__select-input').val($(this).text());
+			$('.select-form').addClass('hide-select-form');
+			$('.input-select-wrap').children('span').css({
+				'transform' : 'translateY(-50%) rotate(180deg)'
+			})
+
+	})
+
+	$(document).mouseup(function (e){
+		var div = $(".form-book__select-input"); 
+		if (!div.is(e.target) && div.has(e.target).length === 0) { 
+			$('.select-form').addClass('hide-select-form');
+			$('.input-select-wrap').children('span').css({
+				'transform' : 'translateY(-50%) rotate(180deg)'
+			})
+		}
+	});
+
+	// $('.form-book__select-input').on('blur', function() {
+	// 	$('.select-form').addClass('hide-select-form');
+	// })
+
+	// Плавная прокрутка
 	$(function(){
-	  $('a[href^="#"]').on('click', function(event) {
+	  $('a[href^="#"]:not(a[href="#"])').on('click', function(event) {
 	    // отменяем стандартное действие
 	    event.preventDefault();
 	    
 	    var sc = $(this).attr("href"),
 	        dn = $(sc).offset().top;
-	    /*
-	    * sc - в переменную заносим информацию о том, к какому блоку надо перейти
-	    * dn - определяем положение блока на странице
-	    */
+	    
+	    // * sc - в переменную заносим информацию о том, к какому блоку надо перейти
+	    // * dn - определяем положение блока на странице
+	    
 	    
 	    $('html, body').animate({scrollTop: dn}, 1000);
 	    
@@ -131,4 +111,22 @@ $(document).ready(function() {
 	    */
 	  });
 	});
+
+	//image open
+	$('.image-wrap__item').click(function(event){	// Событие клика на маленькое изображение
+		  	event.preventDefault();
+		  	var img = $(event.target).children('img');	// Получаем изображение, на которое кликнули
+			var src = img.attr('src'); // Достаем из этого изображения путь до картинки
+			$("body").append("<div class='popup'>"+ //Добавляем в тело документа разметку всплывающего окна
+							 "<div class='popup_bg'></div>"+ // Блок, который будет служить фоном затемненным
+							 "<img src='"+src+"' class='popup_img' />"+ // Само увеличенное фото
+							 "</div>"); 
+			$(".popup").fadeIn(800); // Медленно выводим изображение
+			$(".popup_bg").click(function(){	// Событие клика на затемненный фон	   
+				$(".popup").fadeOut(800);	// Медленно убираем всплывающее окно
+				setTimeout(function() {	// Выставляем таймер
+				  $(".popup").remove(); // Удаляем разметку всплывающего окна
+				}, 800);
+			});
+		});
 };
