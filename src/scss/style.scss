@@ -306,10 +306,11 @@ body {
 	background: url(../image/jpeg/foodQuality-bg.jpg) no-repeat center center;
 	background-size: cover;
 	position: relative;
-	z-index: 10;
+	z-index: 2;
 }
 .content-max-width-food-quality-position {
-	position: relative
+	position: relative;
+	z-index: 2;
 }
 .food-quality-screen-img img{
 	// filter: blur(5px);
@@ -453,16 +454,31 @@ body {
    }
 }
 .image-wrap__item {
+	position: relative;
 	padding: 7px 0 7px 0;
+	a {
+		text-decoration: none;
+		display: block;
+		&:hover:before {
+			content: '';
+			position: absolute;
+			top: 7px;
+			left: 0;
+			bottom: 7px;
+			right: 0;
+			background-color: rgba(0, 0, 0, .5);
+
+		}
+		&:hover{
+				box-shadow: 0px 0px 5px rgba(255, 255, 0, .6),
+				0px 0px 6px rgba(255, 255, 0, .8),
+				0px 0px 9px rgba(255, 255, 0, .6);
+			}
+	}
 	img {
 		display: block;
 	   margin: 0;
 		width: 100%;
-		&:hover{
-			box-shadow: 0px 0px 5px rgba(255, 255, 0, .6),
-			0px 0px 6px rgba(255, 255, 0, .8),
-			0px 0px 9px rgba(255, 255, 0, .6);
-		}
 	}
 }
 
@@ -775,6 +791,102 @@ body {
 	}
 	&:hover:before {
 		height: 3px;
+	}
+}
+.popup {
+	position: fixed;
+	height:100%;
+	width:100%;
+	top:0;
+	left:0;
+	display:none;
+	text-align:center;
+	z-index: 99999;
+}
+
+.popup_bg {
+	background:rgba(0,0,0,0.4);
+	position:fixed;
+	z-index:99999;
+	height:100%;
+	width:100%;
+}
+
+
+.popup_img {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	margin:0 auto;
+	z-index:99999;
+	max-width: 94%;
+	max-height: 94%;
+	height: auto;
+}
+
+.datepicker {
+	background-color: rgba(0, 0, 0, .5);
+	border: 1px solid rgb(255, 201, 1);
+	> i {
+		background-color: rgb(255, 201, 1);
+	}
+	&--cell-day {
+		color: #fff;
+	}
+	.-other-month- {
+		color: rgb(255, 201, 1);
+	}
+}
+// .form-book__select-form{
+// 	position: relative;
+// }
+.hide-select-form {
+	display: none;
+}
+.position-select-form {
+	position: relative;
+}
+.input-select-wrap {
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	span {
+		width: 1.7rem;
+		height: 1.3rem;
+		background: url(../image/png/Shape.png) no-repeat center center;
+		background-size: 100%;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%) rotate(180deg);
+		transition: all 0.2s;
+		right: 10px;
+	}
+}
+
+
+.select-form {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	background-color: rgba(255, 255, 255, .95);
+	border: 1px solid rgb(255, 201, 1);
+	border-top: none;
+	border-radius: 8px;
+	text-align: center;
+	// padding: 10px 0;
+	z-index: 10;
+	li {
+		cursor: pointer;
+		padding: 8px 0;
+		font-family: Overpass;
+		font-weight: 300;
+		font-size: 1.9rem;
+		// color: #fff;
+		&:hover {
+			color: #fff;
+			background-color: rgba(0, 0, 0, .5);
+		}
 	}
 }
 
@@ -1137,6 +1249,12 @@ body {
 	}
 	.about-screen-content__paragraph {
 		font-size: 3rem;
+	}
+	.select-form {
+		li {
+			padding: 10px 0;
+			font-size: 3rem;
+		}
 	}
 	.about-screen-header__elem,
 	.food-quality-screen-content__header,
